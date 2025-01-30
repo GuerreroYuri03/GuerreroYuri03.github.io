@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Servicio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2 {
+            color: blue; /* Color azul para los títulos */
+        }
+        #service-image {
+            max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Detalles del Servicio</h1>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="infraestructura.html">Gestión de Infraestructura</a>
+        <a href="seguridad.html">Ciberseguridad</a>
+        <a href="analisis.html">Analítica de Datos</a>
+    </nav>
+    <div class="container">
+        <h2 id="service-title">Título del Servicio</h2>
+        <img id="service-image" src="" alt="Imagen del Servicio"/>
+        <div id="service-description"></div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Servicios de TI de Tesla. Todos los derechos reservados.</p>
+        <p><a href="contacto.html">Contáctanos</a> | <a href="privacidad.html">Política de privacidad</a></p>
+    </footer>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const servicio = urlParams.get('servicio');
+
+        const servicioDetalles = {
+            crm: {
+                title: 'Sistema de gestión de clientes (CRM)',
+                image: 'assets/1.jpeg',
+                description: `
+                <div style="text-align: left;">
+                    <p>El <strong>Sistema de Gestión de Clientes (CRM)</strong> de Tesla es una solución integral diseñada para mejorar la gestión de las relaciones con los clientes y potenciar el rendimiento comercial. Permite visualizar y analizar las interacciones con los clientes a lo largo de todo su ciclo de vida.</p>
+                
+                    <h2>Características Principales</h2>
+                    <ul>
+                        <li><strong>Gestión de Relaciones:</strong> Organiza y centraliza toda la información relevante sobre los clientes, incluidas interacciones, preferencias y necesidades. Esto permite a los equipos tener una visión holística de cada cliente.</li>
+                        <li><strong>Automatización de Ventas:</strong> Incrementa la eficiencia al automatizar tareas repetitivas, como el seguimiento de correos electrónicos y la programación de tareas, lo que permite al equipo enfocarse en las relaciones clave.</li>
+                        <li><strong>Análisis de Datos:</strong> Ofrece herramientas de análisis robustas que permiten a los usuarios extraer insights significativos de los datos, facilitando la toma de decisiones informadas y la identificación de oportunidades de negocio.</li>
+                        <li><strong>Integración:</strong> Se integra sin esfuerzo con otras aplicaciones y plataformas que Tesla utiliza, incluyendo sistemas de marketing, servicios de correo electrónico y software de gestión de proyectos, creando un entorno de trabajo más cohesivo.</li>
+                        <li><strong>Segmentación del Cliente:</strong> Permite crear segmentos específicos de clientes basados en diversos criterios, lo que ayuda a dirigir campañas de marketing más efectivas y personalizadas.</li>
+                        <li><strong>Gestión de Campañas:</strong> Facilita el diseño, la ejecución y el seguimiento de campañas de marketing. Proporciona métricas detalladas sobre la efectividad de cada campaña, permitiendo optimizarlas en tiempo real.</li>
+                        <li><strong>Seguridad de Datos:</strong> Asegura que toda la información de los clientes esté protegida mediante protocolos de seguridad avanzados, garantizando la confidencialidad y la integridad de los datos.</li>
+                    </ul>
+                    
+                    <h2>Beneficios del CRM</h2>
+                    <p>El CRM permite a Tesla mejorar la satisfacción del cliente, ya que proporciona un servicio más personalizado y adaptado a las necesidades específicas de cada cliente. Además, mejora la colaboración interna entre los equipos de ventas, marketing y atención al cliente, facilitando un enfoque más coordenado hacia los objetivos empresariales.</p>
+                    <p>Con un acceso centralizado a la información de los clientes, los empleados pueden rápidamente resolver problemas, responder a consultas y ofrecer un servicio más efectivo. Esto no solo fortalece la lealtad del cliente, sino que también se traduce en un aumento de la retención de clientes.</p>
+
+                    <h2>Implementación y Capacitación</h2>
+                    <p>La implementación del CRM se acompaña de un plan de capacitación integral para asegurarse de que todos los usuarios estén familiarizados con sus características y funcionalidades. Se organizan sesiones de entrenamiento regulares y se proporciona documentación accesible para ayudar a maximizar el uso del sistema dentro de la organización.</p>
+                    
+                    <h2>Conclusiones</h2>
+                    <p>El Sistema de Gestión de Clientes (CRM) es una herramienta esencial para Tesla, ya que no solo facilita la gestión de las relaciones con los clientes, sino que también impulsa el rendimiento global del negocio al proporcionar insights valiosos y una experiencia de cliente excepcional.</p>
+                </div>
+                `
+            },
+            seguimiento: {
+                title: 'Plataforma de seguimiento de mantenimiento de vehículos',
+                image: 'assets/2.jpeg',
+                description: `
+                    <div style="text-align: left;">
+                        <p>La <strong>Plataforma de Seguimiento de Mantenimiento de Vehículos</strong> de Tesla es una solución integral que permite gestionar de manera eficiente el mantenimiento y la reparación de toda la flota de vehículos. Este sistema facilita la programación de citas, el seguimiento de intervenciones y la gestión de historial del servicio.</p>
+                        
+                        <h2>Características Principales</h2>
+                        <ul>
+                            <li><strong>Programación de Citas:</strong> Permite a los usuarios programar citas para mantenimiento y reparaciones de manera rápida y sencilla, evitando tiempos de inactividad innecesarios.</li>
+                            <li><strong>Historial de Mantenimiento:</strong> Lleva un registro detallado de cada intervención realizada, con información sobre el tipo de servicio, fechas y costos, lo que ayuda a tener una visión clara del historial del vehículo.</li>
+                            <li><strong>Alertas y Recordatorios:</strong> Genera notificaciones automáticas para recordar a los usuarios sobre mantenimientos programados y revisiones periódicas, asegurando que los vehículos estén siempre al día.</li>
+                            <li><strong>Informes Analíticos:</strong> Proporciona informes detallados que permiten evaluar el estado de la flota, identificar patrones de uso y prever futuros mantenimientos, mejorando la planificación de recursos.</li>
+                            <li><strong>Integración con Sistemas de Gestión:</strong> Se integra con otros sistemas de Tesla para que la información fluya sin problemas entre diferentes departamentos, como logística y ventas.</li>
+                            <li><strong>Interfaz Intuitiva:</strong> La plataforma cuenta con una interfaz fácil de usar que facilita la navegación y la gestión de mantenimientos incluso para usuarios no técnicos.</li>
+                        </ul>
+
+                        <h2>Beneficios de la Plataforma</h2>
+                        <p>Esta herramienta no solo optimiza el proceso de mantenimiento, sino que también contribuye a la eficiencia operativa al reducir el tiempo de inactividad de los vehículos. Con un registro detallado de servicios previos, los técnicos pueden diagnosticar problemas más rápidamente y realizar reparaciones más efectivas.</p>
+                        
+                        <h2>Capacitación y Soporte</h2>
+                        <p>Tesla proporciona capacitación a los usuarios para asegurar la correcta utilización de la plataforma. Además, se ofrece soporte técnico para resolver cualquier posible inconveniente que pueda surgir durante el uso del sistema.</p>
+
+                        <h2>Conclusiones</h2>
+                        <p>La Plataforma de Seguimiento de Mantenimiento de Vehículos es esencial para asegurar que la flota de Tesla opere en condiciones óptimas, prolongando la vida útil de los vehículos y garantizando la seguridad de los usuarios.</p>
+                    </div>
+                `
+            },
+
+            obsoleto: {
+                title: 'Sistema de gestión obsoleto',
+                image: 'assets/3.jpeg', // Asegúrate de que la ruta sea correcta
+                description: `
+                <div style="text-align: left;">
+                        <p>El <strong>Sistema de Gestión Obsoleto</strong> se refiere a una aplicación que ha sido retirada de uso debido a su falta de eficacia y adaptabilidad frente a las necesidades actuales de Tesla. Este sistema fue diseñado en una época en la que las demandas del negocio y las tecnologías disponibles eran muy diferentes.</p>
+                        
+                        <h2>Características del Sistema Obsoleto</h2>
+                        <ul>
+                            <li><strong>Limitaciones Técnicas:</strong> La aplicación presentaba limitaciones en términos de funcionalidad y flexibilidad, lo que dificultaba su capacidad para adaptarse a nuevas tecnologías y demandas del mercado.</li>
+                            <li><strong>Falta de Actualizaciones:</strong> El sistema dejó de recibir actualizaciones importantes, lo que resultó en problemas de seguridad y un rendimiento deficiente.</li>
+                            <li><strong>Interfaz de Usuario Anticuada:</strong> La experiencia del usuario era poco intuitiva, lo que complicaba la formación de nuevos empleados y la eficiencia operativa.</li>
+                            <li><strong>Integración Deficiente:</strong> La integración con otros sistemas y aplicaciones dentro de Tesla era limitada, lo que resultó en flujos de trabajo desarticulados.</li>
+                        </ul>
+
+                        <h2>Razones de su Retiro</h2>
+                        <p>La decisión de retirar el Sistema de Gestión Obsoleto fue impulsada por varias razones clave:</p>
+                        <ul>
+                            <li><strong>Necesidad de Modernización:</strong> Con el avance de la tecnología y el crecimiento de Tesla, se hizo evidente que un sistema más moderno y eficiente era esencial para manejar la complejidad creciente de las operaciones.</li>
+                            <li><strong>Mejora en la Eficiencia:</strong> Se necesitaba un sistema que pudiera mejorar los flujos de trabajo y optimizar el uso de recursos.</li>
+                            <li><strong>Seguridad:</strong> Mantener un sistema obsoleto presentaba riesgos significativos de seguridad para la información corporativa.</li>
+                        </ul>
+
+                        <h2>Sistemas de Reemplazo</h2>
+                        <p>Las aplicaciones modernas que han reemplazado al Sistema de Gestión Obsoleto ofrecen:</p>
+                        <ul>
+                            <li><strong>Interfaz Amigable:</strong> Diseñadas para facilitar el uso, con una mejor experiencia para el usuario.</li>
+                            <li><strong>Integración Avanzada:</strong> Se integran fácilmente con otros sistemas y plataformas dentro de Tesla, promoviendo una mayor colaboración entre equipos.</li>
+                            <li><strong>Funcionalidades Mejoradas:</strong> Proporcionan capacidades avanzadas, incluyendo análisis de datos, informes en tiempo real y automatización de flujos de trabajo.</li>
+                        </ul>
+
+                        <h2>Conclusión</h2>
+                        <p>Retirar el Sistema de Gestión Obsoleto ha permitido a Tesla adoptar soluciones más eficientes y seguras que se alinean mejor con su misión de innovación y excelencia operativa. Estas mejoras garantizan que los equipos de Tesla cuenten con las herramientas adecuadas para optimizar su eficiencia en un mercado competitivo.</p>
+                    </div>
+                `
+            },
+
+            projectManagementTool: {
+                title: 'Sistema de gestión de proyectos (Project Management Tool)',
+                image: 'assets/4.jpeg',
+                description: `
+                    <div style="text-align: left;">
+                        <p>El <strong>Sistema de Gestión de Proyectos</strong> de Tesla es una herramienta robusta y eficiente diseñada para coordinar tareas y recursos dentro de los proyectos. Su propósito es asegurar que la ejecución de proyectos sea organizada y que todos los miembros del equipo estén alineados con los objetivos establecidos.</p>
+                        
+                        <h2>Características Principales</h2>
+                        <ul>
+                            <li><strong>Planificación de Proyectos:</strong> Permite a los usuarios definir los hitos, las actividades y la programación de cada proyecto, facilitando una planificación detallada.</li>
+                            <li><strong>Asignación de Tareas:</strong> Los líderes de proyecto pueden asignar tareas específicas a los miembros del equipo, asegurando que cada persona tenga claro su rol y responsabilidades.</li>
+                            <li><strong>Seguimiento del Progreso:</strong> Ofrece herramientas que permiten a los usuarios rastrear el progreso de las tareas y hitos en tiempo real, lo que ayuda a identificar retrasos y cuellos de botella.</li>
+                            <li><strong>Colaboración en Tiempo Real:</strong> Facilita la comunicación y colaboración entre los miembros del equipo mediante funcionalidades de chat y intercambio de archivos.</li>
+                            <li><strong>Informes y Análisis:</strong> Genera informes detallados sobre el rendimiento del proyecto, permitiendo a los gerentes evaluar la eficiencia y realizar ajustes proactivos según sea necesario.</li>
+                        </ul>
+                        
+                        <h2>Beneficios del Sistema de Gestión de Proyectos</h2>
+                        <p>Implementar esta herramienta dentro de Tesla trae múltiples beneficios, tales como:</p>
+                        <ul>
+                            <li><strong>Mejora en la Eficiencia:</strong> Asegura que las tareas se realicen de manera organizada y eficiente, minimizando el tiempo perdido y maximizando la productividad.</li>
+                            <li><strong>Claridad en la Comunicación:</strong> Todos los miembros del equipo están informados sobre el progreso del proyecto y cualquier cambio, lo que reduce malentendidos.</li>
+                            <li><strong>Mayor Control:</strong> Los gerentes de proyecto tienen un mejor control sobre los recursos, presupuestos y cronogramas, lo que permite una gestión más efectiva.</li>
+                        </ul>
+
+                        <h2>Implementación y Capacitación</h2>
+                        <p>Para garantizar el éxito en la adopción del Sistema de Gestión de Proyectos, Tesla lleva a cabo un programa de capacitación que incluye:</p>
+                        <ul>
+                            <li>Sesiones de formación para los usuarios.</li>
+                            <li>Acceso a documentación detallada sobre características y mejores prácticas.</li>
+                            <li>Soporte continuo para resolver cualquier duda o inconveniente que surja durante el uso de la herramienta.</li>
+                        </ul>
+
+                        <h2>Conclusiones</h2>
+                        <p>El Sistema de Gestión de Proyectos de Tesla no solo optimiza la planificación y ejecución de proyectos, sino que también crea un entorno donde la colaboración y la comunicación son fundamentales. Esta herramienta se erige como un pilar esencial para la innovación y la eficiencia operativa dentro de la empresa.</p>
+                    </div>
+                `
+            },
+
+            soporteTecnico: {
+                title: 'Soporte técnico para usuarios internos de Tesla',
+                image: 'assets/5.jpeg',
+                description: `
+                    <div style="text-align: left;">
+                        <p>El <strong>Servicio de Soporte Técnico</strong> para usuarios internos de Tesla es una solución integral diseñada para proporcionar asistencia técnica a empleados. Este servicio es fundamental para garantizar el correcto funcionamiento de los equipos y del software utilizados dentro de la empresa, permitiendo que el personal se enfoque en sus tareas sin interrupciones.</p>
+                        
+                        <h2>Características Principales</h2>
+                        <ul>
+                            <li><strong>Asistencia en Sitio:</strong> Proporciona soporte técnico en las instalaciones de Tesla, donde técnicos pueden resolver problemas directamente en el lugar.</li>
+                            <li><strong>Soporte Remoto:</strong> Los técnicos pueden acceder a los equipos de forma remota para diagnóstico y resolución de problemas, ahorrando tiempo y facilitando la resolución de incidencias.</li>
+                            <li><strong>Gestión de Tickets:</strong> Utiliza un sistema de gestión de tickets para recibir, rastrear y resolver solicitudes de soporte, asegurando un seguimiento eficiente y efectivo.</li>
+                            <li><strong>Formación y Capacitación:</strong> Ofrece sesiones de formación para los empleados sobre el uso adecuado de herramientas y software, así como en buenas prácticas de seguridad.</li>
+                            <li><strong>Actualizaciones y Mantenimiento:</strong> Se encarga de la gestión de actualizaciones de software y mantenimiento del hardware, asegurando que los equipos funcionen sin problemas.</li>
+                        </ul>
+
+                        <h2>Beneficios del Soporte Técnico</h2>
+                        <p>Este servicio tiene múltiples beneficios, tales como:</p>
+                        <ul>
+                            <li><strong>Reducción del Tiempo de Inactividad:</strong> Al proporcionar asistencia rápida, se minimizan las interrupciones en el trabajo diario.</li>
+                            <li><strong>Mejora en la Productividad:</strong> Con equipos y software funcionando correctamente, los empleados pueden realizar sus tareas de manera más eficiente.</li>
+                            <li><strong>Confianza del Personal:</strong> Saber que cuentan con soporte técnico disponible genera confianza en el uso de tecnología y mejora la satisfacción en el lugar de trabajo.</li>
+                        </ul>
+
+                        <h2>Procedimientos de Solicitud de Asistencia</h2>
+                        <p>El proceso para solicitar asistencia técnica es sencillo y directo:</p>
+                        <ul>
+                            <li>Los empleados pueden enviar una solicitud de soporte a través de un portal en línea o mediante un teléfono de contacto designado.</li>
+                            <li>Una vez recibida la solicitud, el equipo de soporte técnico evalúa el problema y asigna un técnico para la resolución.</li>
+                            <li>El equipo técnico se comunica con el usuario para entender más a fondo el problema y coordinar la asistencia necesaria.</li>
+                        </ul>
+
+                        <h2>Conclusiones</h2>
+                        <p>El servicio de soporte técnico es esencial en Tesla para mantener la continuidad operativa y garantizar la satisfacción de los empleados. Un acceso rápido y eficiente a la asistencia técnica asegura que los recursos tecnológicos siempre estén disponibles para apoyar las innovaciones y el crecimiento continuo de la empresa.</p>
+                    </div>
+                `
+            },
+   
+            desarrolloAplicaciones: {
+                title: 'Desarrollo de nuevas aplicaciones para el servicio al cliente',
+                image: 'assets/6.jpeg',
+                description: `
+                    <div style="text-align: left;">
+                        <p>El <strong>Desarrollo de Nuevas Aplicaciones</strong> para el servicio al cliente es un proceso continuo e innovador que busca crear herramientas digitales que mejoren la interacción con los clientes de Tesla. Este enfoque permitirá ofrecer una experiencia más ágil, eficiente y personalizada.</p>
+                        
+                        <h2>Características Principales</h2>
+                        <ul>
+                            <li><strong>Identificación de Necesidades:</strong> Se centra en entender las necesidades y preferencias de los clientes a través de análisis de datos y feedback directo.</li>
+                            <li><strong>Prototipos Rápidos:</strong> Se utilizan metodologías ágiles para crear prototipos que permiten realizar pruebas rápidas y obtener comentarios anticipados de los usuarios.</li>
+                            <li><strong>Integración con Sistemas Existentes:</strong> Las nuevas aplicaciones están diseñadas para integrarse sin problemas con los sistemas y procesos actuales dentro de Tesla.</li>
+                            <li><strong>Mejoras Continuas:</strong> Los desarrollos se basan en la retroalimentación constante de los usuarios, asegurando que las aplicaciones evolucionen para satisfacer las demandas cambiantes.</li>
+                            <li><strong>Aplicaciones Multicanal:</strong> Las herramientas están disponibles en múltiples plataformas, permitiendo a los clientes interactuar con Tesla a través de sus dispositivos preferidos.</li>
+                        </ul>
+                        
+                        <h2>Beneficios de desarollar Nuevas Aplicaciones</h2>
+                        <p>El desarrollo de nuevas aplicaciones proporciona varios beneficios clave, tales como:</p>
+                        <ul>
+                            <li><strong>Experiencia del Cliente Mejorada:</strong> Facilita interacciones más rápidas y efectivas, aumentando la satisfacción general del cliente.</li>
+                            <li><strong>Aumento de la Eficiencia:</strong> Permite que los empleados respondan a las consultas de los clientes de forma más rápida y precisa.</li>
+                            <li><strong>Personalización:</strong> Las aplicaciones pueden ser adaptadas para ofrecer experiencias personalizadas basadas en el comportamiento y la preferencia del cliente.</li>
+                            <li><strong>Feedback en Tiempo Real:</strong> Las aplicaciones permiten la recolección de datos y feedback de los clientes en tiempo real, ayudando a identificar áreas de mejora inmediata.</li>
+                        </ul>
+
+                        <h2>Proceso de Desarrollo</h2>
+                        <p>El proceso de desarrollo implica varias etapas, incluyendo:</p>
+                        <ul>
+                            <li><strong>Investigación y Análisis:</strong> Comprender el mercado y las necesidades específicas de los clientes antes de iniciar el desarrollo.</li>
+                            <li><strong>Diseño y Prototipado:</strong> Crear diseños iniciales y prototipos para visualización y prueba temprana por parte de los usuarios.</li>
+                            <li><strong>Desarrollo:</strong> Construcción de la aplicación utilizando tecnologías modernas y técnicas de programación eficientes.</li>
+                            <li><strong>Pruebas y Control de Calidad:</strong> Asegurar que la aplicación funcione correctamente y cumpla con los estándares de calidad antes de su lanzamiento.</li>
+                            <li><strong>Implementación y Formación:</strong> Lanzamiento de la aplicación y capacitación a los empleados sobre su uso y beneficios.</li>
+                        </ul>
+
+                        <h2>Conclusiones</h2>
+                        <p>El desarrollo de nuevas aplicaciones para el servicio al cliente es fundamental para Tesla, ya que apercibe a la empresa de innovar continuamente y adaptarse a las necesidades de los clientes. Este enfoque no solo mejora la eficiencia operativa, sino que también fortalece la relación entre Tesla y sus clientes.</p>
+                    </div>
+                `
+            },
+
+            capacitacion: {
+                title: 'Capacitación y entrenamiento para usuarios de nuevas aplicaciones',
+                image: 'assets/7.jpeg',
+                description: `
+                    <div style="text-align: left;">
+                        <p>La <strong>Capacitación y Entrenamiento para Usuarios de Nuevas Aplicaciones</strong> en Tesla es un programa integral diseñado para asegurar que los empleados estén preparados para utilizar las nuevas herramientas y tecnologías implementadas. Este programa busca maximizar la adopción y el uso efectivo de las aplicaciones, facilitando la transición y la optimización de procesos en la empresa.</p>
+                        
+                        <h2>Objetivos del Programa</h2>
+                        <p>El programa de capacitación tiene como objetivos principales:</p>
+                        <ul>
+                            <li><strong>Mejorar la Competencia:</strong> Asegurar que todos los empleados tengan las habilidades necesarias para manejar nuevas aplicaciones de forma eficiente.</li>
+                            <li><strong>Facilitar la Transición:</strong> Hacer que la transición a nuevas tecnologías sea lo más fluida posible, reduciendo la frustración y la resistencia al cambio.</li>
+                            <li><strong>Aumentar la Productividad:</strong> Proporcionar a los empleados las herramientas necesarias para llevar a cabo sus tareas de manera más eficaz y rápida.</li>
+                            <li><strong>Fomentar la Innovación:</strong> Animar a los empleados a explorar nuevas funcionalidades y a aprovechar al máximo las aplicaciones disponibles.</li>
+                        </ul>
+
+                        <h2>Características del Programa de Capacitación</h2>
+                        <ul>
+                            <li><strong>Sesiones de Entrenamiento:</strong> Ofrecemos sesiones prácticas que cubren las funcionalidades clave de las nuevas aplicaciones, facilitando la comprensión y el uso.</li>
+                            <li><strong>Materiales de Apoyo:</strong> Se proporciona documentación, videos tutoriales y guías rápidas que los empleados pueden consultar en cualquier momento.</li>
+                            <li><strong>Capacitación Continua:</strong> El programa incluye sesiones periódicas de actualización y seguimiento para abordar nuevos desarrollos y mejoras en las aplicaciones.</li>
+                            <li><strong>Feedback y Evaluación:</strong> Se implementan métodos para recopilar feedback de los participantes y realizar evaluaciones para medir la efectividad del entrenamiento.</li>
+                        </ul>
+
+                        <h2>Beneficios de la Capacitación</h2>
+                        <p>Los beneficios de este programa son múltiples:</p>
+                        <ul>
+                            <li><strong>Incremento en la Eficiencia:</strong> Los empleados capacitados son más capaces de usar las aplicaciones, lo que se traduce en un trabajo más eficiente.</li>
+                            <li><strong>Mejora en la Satisfacción Laboral:</strong> La capacitación ayuda a reducir la frustración asociada con la adaptación a nuevas tecnologías, mejorando la experiencia del empleado.</li>
+                            <li><strong>Optimización de Procesos:</strong> Con un mejor conocimiento de las aplicaciones, los empleados pueden realizar tareas de manera más efectiva, optimizando los flujos de trabajo.</li>
+                        </ul>
+
+                        <h2>Conclusiones</h2>
+                        <p>El programa de capacitación y entrenamiento es fundamental en Tesla para garantizar que todos los empleados tengan las herramientas necesarias para desempeñar su trabajo de manera eficiente. A medida que Tesla continúa innovando y adoptando nuevas tecnologías, este programa asegura que cada persona esté bien preparada para contribuir al éxito de la empresa.</p>
+                    </div>
+                `
+            },
+
+            mantenimientoInventarios: {
+                title: 'Mantenimiento de software de gestión de inventarios',
+                image: 'assets/8.jpeg', // Asegúrate de que la ruta sea correcta
+                description: `
+                    <div style="text-align: left;">
+                        <p>El <strong>Mantenimiento de Software de Gestión de Inventarios</strong> se refiere a una aplicación que ha sido retirada debido a su obsolescencia. Este software ya no es compatible con los sistemas actuales y ha sido reemplazado por herramientas más modernas, eficientes y adaptables a las necesidades cambiantes de Tesla.</p>
+                        
+                        <h2>Características del Software Obsoleto</h2>
+                        <ul>
+                            <li><strong>Limitaciones de Funcionalidad:</strong> El software presentaba funcionalidades limitadas que no permitían una gestión eficiente del inventario en tiempo real.</li>
+                            <li><strong>Interfaz de Usuario Anticuada:</strong> La experiencia del usuario era poco intuitiva, lo que dificultaba su uso y requería una capacitación extensa para nuevos empleados.</li>
+                            <li><strong>Dificultad de Integración:</strong> Este software no se integraba adecuadamente con otros sistemas utilizados en Tesla, proporcionando una experiencia fragmentada.</li>
+                            <li><strong>Escasa Actualización:</strong> La falta de actualizaciones y soporte técnico a lo largo del tiempo llevó a problemas de seguridad y rendimiento.</li>
+                        </ul>
+
+                        <h2>Razones para su Retiro</h2>
+                        <p>Las principales razones para retirar el software de gestión de inventarios fueron:</p>
+                        <ul>
+                            <li><strong>Incompatibilidad:</strong> Con el avance de la tecnología, la aplicación se volvió incompatible con los nuevos sistemas y hardware implementados por Tesla.</li>
+                            <li><strong>Necesidad de Mejoras en la Eficiencia:</strong> Se hizo evidente que un sistema más moderno proporcionaría un mejor flujo de trabajo y una administración más eficaz del inventario.</li>
+                            <li><strong>Problemas de Seguridad:</strong> Mantener un software obsoleto presentaba riesgos significativos en términos de seguridad de datos.</li>
+                        </ul>
+
+                        <h2>Sistemas de Reemplazo</h2>
+                        <p>El software de gestión de inventarios ha sido reemplazado por herramientas más modernas que ofrecen:</p>
+                        <ul>
+                            <li><strong>Interfaz Mejorada:</strong> Las nuevas aplicaciones están diseñadas para ser más intuitivas, facilitando el uso por parte de todos los empleados.</li>
+                            <li><strong>Gestión en Tiempo Real:</strong> Permiten un seguimiento del inventario en tiempo real, ayudando a optimizar la gestión de recursos.</li>
+                            <li><strong>Integración:</strong> Estas nuevas herramientas se integran eficazmente con otros sistemas operativos y aplicaciones dentro de Tesla, mejorando los flujos de trabajo.</li>
+                            <li><strong>Seguridad Aumentada:</strong> Se implementan medidas de seguridad más robustas para proteger la información relacionada con el inventario.</li>
+                        </ul>
+
+                        <h2>Conclusiones</h2>
+                        <p>El retiro del mantenimiento del software de gestión de inventarios ha permitido a Tesla adoptar soluciones más eficientes y seguras. Esto asegura que la gestión del inventario esté alineada con los estándares tecnológicos y de seguridad más actuales, promoviendo así una mayor eficiencia operativa y un mejor servicio al cliente.</p>
+                    </div>
+                `
+            },
+            seguridadInformacion: {
+                title: 'Seguridad de la Información',
+                image: 'assets/12.jpeg', // Asegúrate de que la ruta sea correcta
+                description: `
+                    <div style="text-align: left;">
+                        <p>La <strong>Seguridad de la Información</strong> en Tesla es un marco integral diseñado para proteger los datos y las redes de la organización, garantizando la confidencialidad, integridad y disponibilidad de la información. Este enfoque es fundamental para salvaguardar la información sensible de la empresa y de sus clientes.</p>
+                        
+                        <h2>Objetivos de la Seguridad de la Información</h2>
+                        <p>Los principales objetivos de la seguridad de la información son:</p>
+                        <ul>
+                            <li><strong>Confidencialidad:</strong> Asegurar que solo las personas autorizadas tengan acceso a la información sensible.</li>
+                            <li><strong>Integridad:</strong> Proteger la precisión y completitud de la información, evitando alteraciones no autorizadas.</li>
+                            <li><strong>Disponibilidad:</strong> Garantizar que la información y los recursos estén disponibles para los usuarios autorizados cuando sea necesario.</li>
+                        </ul>
+
+                        <h2>Características Principales</h2>
+                        <p>Para cumplir con estos objetivos, Tesla implementa diversas características de seguridad, incluyendo:</p>
+                        <ul>
+                            <li><strong>Políticas de Seguridad:</strong> Establecimiento de políticas claras que guían el uso adecuado y la gestión de los datos.</li>
+                            <li><strong>Protección de Redes:</strong> Implementación de firewalls, sistemas de detección de intrusiones y virtual private networks (VPN) para proteger la infraestructura de red.</li>
+                            <li><strong>Control de Acceso:</strong> Uso de tecnologías de autenticación y autorización para garantizar que solo los usuarios adecuados tengan acceso a información sensible.</li>
+                            <li><strong>Cifrado de Datos:</strong> Aplicación de técnicas de cifrado para proteger la información almacenada y en tránsito contra accesos no autorizados.</li>
+                            <li><strong>Auditoría y Monitoreo:</strong> Supervisión constante y auditoría de la seguridad de la información para detectar y responder rápidamente a incidentes de seguridad.</li>
+                        </ul>
+
+                        <h2>Beneficios de la Seguridad de la Información</h2>
+                        <p>La implementación de robustas medidas de seguridad de la información ofrece múltiples beneficios, tales como:</p>
+                        <ul>
+                            <li><strong>Protección con Proactividad:</strong> La identificación y mitigación de riesgos antes de que se conviertan en problemas serios.</li>
+                            <li><strong>Confianza del Cliente:</strong> Genera confianza en los clientes al demostrar que sus datos están protegidos.</li>
+                            <li><strong>Conformidad Regulatoria:</strong> Cumple con las normativas y estándares del sector, evitando sanciones y mejorando la reputación de la empresa.</li>
+                        </ul>
+
+                        <h2>Proceso de Implementación</h2>
+                        <p>La implementación de la seguridad de la información en Tesla implica las siguientes etapas:</p>
+                        <ul>
+                            <li><strong>Análisis de Riesgos:</strong> Evaluar vulnerabilidades y riesgos potenciales asociados con la información y los sistemas.</li>
+                            <li><strong>Desarrollo de Estrategias:</strong> Establecer estrategias y tecnologías adecuadas para mitigar los riesgos identificados.</li>
+                            <li><strong>Capacitación:</strong> Proporcionar capacitación a los empleados sobre prácticas seguras y la importancia de la seguridad de la información.</li>
+                            <li><strong>Monitoreo y Mejora Continua:</strong> Monitorear la efectividad de las medidas de seguridad y realizar ajustes regulares según sea necesario.</li>
+                        </ul>
+
+                        <h2>Conclusiones</h2>
+                        <p>La seguridad de la información es un aspecto crítico en Tesla, ya que protege los datos sensibles y habilita un entorno de confianza y seguridad. A través de estas medidas, Tesla se posiciona como un líder en la gestión responsable de la información, asegurando que tanto los datos de la empresa como los de sus clientes estén siempre protegidos.</p>
+                    </div>
+                `
+            },
+
+            gestionIncidentes: {
+                title: 'Gestión de Incidentes',
+                image: 'assets/13.jpeg',
+                description: `
+                    <div style="text-align: left;">
+                        <p>La <strong>Gestión de Incidentes</strong> en Tesla es un proceso crítico que se centra en identificar, gestionar y mitigar incidentes de seguridad. Esto incluye la gestión de ataques cibernéticos, brechas de datos y cualquier amenaza que pueda comprometer la integridad, confidencialidad y disponibilidad de la información.</p>
+
+                        <h2>Objetivos del Proceso de Gestión de Incidentes</h2>
+                        <p>Esta gestión busca lograr varios objetivos clave:</p>
+                        <ul>
+                            <li><strong>Detección Rápida:</strong> Identificar incidentes de seguridad en su etapa inicial para limitar su impacto.</li>
+                            <li><strong>Contención:</strong> Aislar y contener un incidente para evitar su propagación a otras áreas del sistema.</li>
+                            <li><strong>Respuestas Efectivas:</strong> Proporcionar respuestas oportunas y adecuadas para mitigar los efectos de los incidentes.</li>
+                            <li><strong>Recuperación:</strong> Restaura la normalidad de los sistemas afectados y asegura una futura resiliencia.</li>
+                        </ul>
+
+                        <h2>Características del Proceso de Gestión de Incidentes</h2>
+                        <p>El proceso incluye diversas características y prácticas que aseguran su efectividad:</p>
+                        <ul>
+                            <li><strong>Monitoreo Continuo:</strong> Vigilancia constante de sistemas para detectar posibles incidentes de seguridad.</li>
+                            <li><strong>Documentación Detallada:</strong> Registro y análisis detallado de cada incidente para facilitar el aprendizaje y la mejora continua.</li>
+                            <li><strong>Evaluación de Impacto:</strong> Análisis de los efectos de un incidente en los sistemas y en la organización en general.</li>
+                            <li><strong>Protocolos de Respuesta:</strong> Implementación de procedimientos estandarizados para la gestión de incidentes, asegurando respuestas coherentes y efectivas.</li>
+                            <li><strong>Capacitación del Personal:</strong> Formación continua para empleados sobre cómo identificar y reportar incidentes de seguridad.</li>
+                        </ul>
+
+                        <h2>Beneficios de una Gestión Efectiva de Incidentes</h2>
+                        <p>Una correcta gestión de incidentes proporciona múltiples ventajas, tales como:</p>
+                        <ul>
+                            <li><strong>Reducción de Riesgos:</strong> Minimiza el impacto de los incidentes y reduce los riesgos asociados a brechas de seguridad.</li>
+                            <li><strong>Mejora en la Reacción:</strong> Permite una respuesta más rápida y coordinada frente a incidentes, limitando daños potenciales.</li>
+                            <li><strong>Fortalecimiento de la Seguridad:</strong> Aumenta la resiliencia de la organización al aprender de incidentes anteriores y mejorar la infraestructura de seguridad.</li>
+                        </ul>
+
+                        <h2>Proceso de Gestión de Incidentes</h2>
+                        <p>El proceso de gestión de incidentes incluye diversas etapas:</p>
+                        <ul>
+                            <li><strong>Detección:</strong> Identificar un incidente a través de sistemas de monitoreo y alertas.</li>
+                            <li><strong>Clasificación:</strong> Evaluar y clasificar la gravedad del incidente para determinar la respuesta adecuada.</li>
+                            <li><strong>Contención y Mitigación:</strong> Implementar medidas para contener el incidente y mitigar su impacto inmediato.</li>
+                            <li><strong>Investigación y Análisis:</strong> Realizar un análisis detallado para comprender las causas del incidente y su impacto.</li>
+                            <li><strong>Recuperación:</strong> Restaurar los sistemas afectados a su estado normal y aplicar mejoras necesarias para evitar futuros incidentes.</li>
+                        </ul>
+
+                        <h2>Conclusiones</h2>
+                        <p>La gestión de incidentes es un componente esencial de la estrategia de seguridad de Tesla. Al identificar y abordar rápidamente las amenazas, Tesla protege sus activos más valiosos y asegura un entorno de trabajo seguro y eficiente para sus empleados y clientes.</p>
+                    </div>
+                `
+            },
+            analisisPredictivo: {
+                title: 'Análisis Predictivo',
+                image: 'assets/14.jpeg',
+                description: `
+                    <div style="text-align: left;">
+                        <p>El <strong>Análisis Predictivo</strong> en Tesla se refiere a la aplicación de técnicas avanzadas para identificar patrones y tendencias de datos, con el objetivo de prevenir posibles vulnerabilidades en la seguridad antes de que ocurran. Este enfoque proactivo permite a Tesla anticiparse a amenazas y responder de manera efectiva.</p>
+                        
+                        <h2>Objetivos del Análisis Predictivo</h2>
+                        <p>Los principales objetivos de esta práctica son:</p>
+                        <ul>
+                            <li><strong>Identificación de Amenazas Potenciales:</strong> Detectar patrones que pueden indicar una amenaza antes de que se materialice.</li>
+                            <li><strong>Mejorar la Toma de Decisiones:</strong> Proporcionar información basada en datos que permita tomar decisiones informadas sobre las medidas de seguridad</li>
+                            <li><strong>Optimización de Recursos:</strong> Asignar recursos de seguridad de manera más eficiente basándose en proyecciones de riesgo.</li>
+                        </ul>
+
+                        <h2>Técnicas Utilizadas</h2>
+                        <p>El análisis predictivo emplea diversas técnicas, incluyendo:</p>
+                        <ul>
+                            <li><strong>Modelos Estadísticos:</strong> Uso de la estadística para identificar relaciones entre variables y prever comportamientos futuros.</li>
+                            <li><strong>Aprendizaje Automático:</strong> Algoritmos que permiten aprender de los datos históricos para realizar predicciones sobre eventos futuros.</li>
+                            <li><strong>Inteligencia Artificial:</strong> Aplicaciones que utilizan IA para analizar grandes volúmenes de datos y reconocer patrones complejos.</li>
+                            <li><strong>Análisis de Tendencias:</strong> Técnica que observa datos a lo largo del tiempo para identificar patrones y predecir cambios futuros.</li>
+                        </ul>
+
+                        <h2>Beneficios del Análisis Predictivo</h2>
+                        <p>La implementación de análisis predictivo genera múltiples beneficios, como:</p>
+                        <ul>
+                            <li><strong>Prevención Proactiva:</strong> Al identificar vulnerabilidades antes de que se conviertan en problemas, se reduce el riesgo de incidentes de seguridad.</li>
+                            <li><strong>Toma de Decisiones Informadas:</strong> La disponibilidad de datos analíticos mejora la calidad de las decisiones estratégicas en cuanto a la seguridad.</li>
+                            <li><strong>Respuesta Rápida:</strong> Permite a los equipos de seguridad actuar rápidamente al prever incidentes antes de que sean evidentes.</li>
+                        </ul>
+
+                        <h2>Implementación y Monitoreo</h2>
+                        <p>La implementación del análisis predictivo en Tesla implica:</p>
+                        <ul>
+                            <li><strong>Recopilación de Datos:</strong> Recolectar datos relevantes de diversas fuentes para construir un conjunto de datos completo.</li>
+                            <li><strong>Desarrollo de Modelos:</strong> Crear y probar modelos que puedan hacer predicciones basadas en datos históricos.</li>
+                            <li><strong>Monitoreo Continuo:</strong> Supervisar el rendimiento de los modelos y ajustar según sea necesario para mantener su efectividad.</li>
+                        </ul>
+
+                        <h2>Conclusiones</h2>
+                        <p>El Análisis Predictivo es una herramienta esencial para Tesla en su esfuerzo por mantener la seguridad de la información y de los sistemas. Este enfoque proactivo no solo ayuda a identificar y mitigar riesgos, sino que también refuerza la postura general de la seguridad dentro de la organización, contribuyendo a un ambiente de trabajo más seguro y confiable.</p>
+                    </div>
+                `
+            },
+   
+            analisisDatosVentas: {
+                title: 'Herramienta de análisis de datos de ventas',
+                image: 'assets/9.jpeg',
+                description: `
+                    <div style="text-align: left;">
+                        <p>La <strong>Herramienta de Análisis de Datos de Ventas</strong> de Tesla es una plataforma avanzada que permite generar informes detallados sobre el desempeño y las tendencias en las ventas. Esta herramienta es crucial para facilitar la toma de decisiones estratégicas y optimizar el rendimiento comercial.</p>
+                        
+                        <h2>Características Principales</h2>
+                        <ul>
+                            <li><strong>Informes Dinámicos:</strong> La herramienta permite crear informes en tiempo real que proporcionan una visión clara del rendimiento de ventas, comparando períodos y productos.</li>
+                            <li><strong>Análisis de Tendencias:</strong> Facilita la identificación de tendencias de ventas a lo largo del tiempo, ayudando a los gerentes a anticipar cambios en el mercado.</li>
+                            <li><strong>Segmentación de Datos:</strong> Permite analizar ventas por diferentes segmentos, como región, tipo de producto y cliente, proporcionando insights específicos.</li>
+                            <li><strong>Visualizaciones Interactivas:</strong> Incluye gráficos y dashboards interactivos que hacen que los datos sean fáciles de entender y comunicar a diferentes partes interesadas.</li>
+                            <li><strong>Integración de Datos:</strong> Se integra sin problemas con otros sistemas y bases de datos utilizados en Tesla, asegurando que siempre se trabaja con la información más actualizada.</li>
+                        </ul>
+
+                        <h2>Beneficios de la Herramienta</h2>
+                        <p>La implementación de esta herramienta proporciona varios beneficios clave:</p>
+                        <ul>
+                            <li><strong>Mejora en la Toma de Decisiones:</strong> Proporciona datos precisos y oportunos que permiten a los líderes tomar decisiones informadas y estratégicas.</li>
+                            <li><strong>Aumento de la Eficiencia:</strong> Al automatizar la generación de informes, los equipos de ventas pueden enfocarse en las interacciones con los clientes en lugar de en el análisis de datos manual.</li>
+                            <li><strong>Adaptabilidad al Mercado:</strong> La capacidad de identificar rápidamente tendencias permite a Tesla adaptarse a las necesidades cambiantes del mercado y a las preferencias del cliente.</li>
+                        </ul>
+
+                        <h2>Implementación de la Herramienta</h2>
+                        <p>La implementación de la herramienta de análisis de datos de ventas incluye:</p>
+                        <ul>
+                            <li><strong>Recopilación de Datos:</strong> Integración de datos de diferentes fuentes para proporcionar una visión completa del rendimiento de ventas.</li>
+                            <li><strong>Capacitación del Usuario:</strong> Se ofrece capacitación para que los empleados aprendan a usar la herramienta de manera efectiva y maximicen sus beneficios.</li>
+                            <li><strong>Monitoreo y Soporte:</strong> Equipo técnico disponible para resolver cualquier duda y monitorear el rendimiento de la herramienta para asegurar su eficacia.</li>
+                        </ul>
+
+                        <h2>Conclusiones</h2>
+                        <p>La Herramienta de Análisis de Datos de Ventas es un recurso invaluable para Tesla, ya que permite no solo medir el éxito comercial, sino también prever y adaptarse a las tendencias del mercado. A través de la toma de decisiones basada en datos, Tesla puede fortalecer aún más su posición en la industria y continuar su desarrollo en innovación.</p>
+                    </div>
+                `
+            },
+   
+            elearning: {
+                title: 'Plataforma de e-learning para formación continua',
+                image: 'assets/10.jpeg',
+                description: `
+                    <div style="text-align: left;">
+                        <p>La <strong>Plataforma de E-Learning para Formación Continua</strong> de Tesla es una herramienta dedicada que ofrece acceso a cursos y recursos educativos en línea. Esta plataforma es fundamental para ayudar a los empleados a mejorar sus habilidades y expandir su conocimiento de forma continua, promoviendo una cultura de aprendizaje en la organización.</p>
+                        
+                        <h2>Características Principales</h2>
+                        <p>La plataforma incluye varias características diseñadas para maximizar la experiencia de aprendizaje:</p>
+                        <ul>
+                            <li><strong>Cursos Interactivos:</strong> Ofrece una variedad de cursos que incluyen contenido multimedia, quizzes interactivas y tareas prácticas para un aprendizaje inmersivo.</li>
+                            <li><strong>Acceso Flexible:</strong> Los empleados pueden acceder a los cursos en cualquier momento y desde cualquier lugar, lo que facilita el aprendizaje a su propio ritmo.</li>
+                            <li><strong>Seguimiento del Progreso:</strong> Permite a los usuarios hacer un seguimiento de su avance en los cursos, completando certificados y recibiendo retroalimentación continua.</li>
+                            <li><strong>Recursos Adicionales:</strong> Proporciona acceso a una amplia gama de materiales complementarios, como artículos, videos y estudios de caso, que apoyan el aprendizaje.</li>
+                            <li><strong>Foros de Discusión:</strong> Facilita la colaboración y el intercambio de ideas entre empleados mediante foros de discusión y grupos de estudio en línea.</li>
+                        </ul>
+
+                        <h2>Beneficios de la Plataforma</h2>
+                        <p>La implementación de esta plataforma trae muchos beneficios, tales como:</p>
+                        <ul>
+                            <li><strong>Mejora de Habilidades:</strong> Ayuda a los empleados a actualizar habilidades esenciales y mantenerse al día con las últimas tendencias y tecnologías de la industria.</li>
+                            <li><strong>Fomento de la Innovación:</strong> Al expandir el conocimiento de los empleados, se promueve una cultura de innovación y mejora continua dentro de Tesla.</li>
+                            <li><strong>Aumento de la Satisfacción Laboral:</strong> Ofrecer oportunidades de desarrollo profesional puede aumentar la motivación y la satisfacción entre los empleados.</li>
+                        </ul>
+
+                        <h2>Proceso de Implementación</h2>
+                        <p>La implementación de la plataforma de e-learning implica varias etapas:</p>
+                        <ul>
+                            <li><strong>Selección de Cursos:</strong> Identificación de cursos relevantes y oportunidades de formación que alineen con los objetivos estratégicos de Tesla.</li>
+                            <li><strong>Desarrollo de Contenido:</strong> Creación o curación de contenido educativo de alta calidad que cumpla con los estándares de la empresa y las expectativas de los empleados.</li>
+                            <li><strong>Capacitación para Empleados:</strong> Realización de sesiones de introducción para los empleados sobre cómo usar la plataforma de manera efectiva.</li>
+                            <li><strong>Monitoreo y Evaluación:</strong> Supervisar el uso de la plataforma y evaluar su efectividad mediante métricas de éxito y feedback de los usuarios.</li>
+                        </ul>
+
+                        <h2>Conclusiones</h2>
+                        <p>La Plataforma de E-Learning para Formación Continua es una inversión clave en el desarrollo del capital humano en Tesla. Al proporcionar acceso a una formación de calidad, Tesla no solo mejora las habilidades de sus empleados, sino que también se asegura de que su equipo esté preparado para afrontar los retos del futuro y contribuir de manera positiva a la organización.</p>
+                    </div>
+                `
+            },
+    
+            desarrolloAplicacionesCliente: {
+                title: 'Desarrollo de nuevas aplicaciones para mejorar la experiencia del cliente',
+                image: 'assets/11.jpeg', // Asegúrate de que la ruta sea correcta
+                description: `
+                    <div style="text-align: left;">
+                        <p>El <strong>Desarrollo de Nuevas Aplicaciones para Mejorar la Experiencia del Cliente</strong> en Tesla es un proceso continuo y dedicado a crear herramientas que optimicen la interacción y satisfacción del cliente. Este enfoque innovador busca mejorar continuamente la experiencia del usuario, asegurando que cada interacción sea fluida y agradable.</p>
+                        
+                        <h2>Características Principales</h2>
+                        <p>Las nuevas aplicaciones están diseñadas con varias características enfocadas en el cliente:</p>
+                        <ul>
+                            <li><strong>Interfaz Amigable:</strong> Las aplicaciones cuentan con un diseño intuitivo que facilita su uso, permitiendo que los clientes naveguen sin complicaciones.</li>
+                            <li><strong>Personalización:</strong> Proporcionan opciones personalizadas que permiten a los usuarios adaptar la experiencia a sus necesidades y preferencias individuales.</li>
+                            <li><strong>Funcionalidades Interactivas:</strong> Las aplicaciones ofrecen funcionalidades interactivas que fomentan la participación activa del cliente, como encuestas y retroalimentación en tiempo real.</li>
+                            <li><strong>Integración de Servicios:</strong> Se integran con otros servicios de Tesla, como atención al cliente y gestión de reservas, para ofrecer una experiencia cohesiva.</li>
+                            <li><strong>Disponibilidad Multi-plataforma:</strong> Accesibles desde dispositivos móviles y de escritorio, asegurando que los clientes puedan acceder a los servicios en cualquier momento y lugar.</li>
+                        </ul>
+
+                        <h2>Beneficios de las Nuevas Aplicaciones</h2>
+                        <p>La implementación de estas aplicaciones proporciona numerosos beneficios:</p>
+                        <ul>
+                            <li><strong>Mejora en la Satisfacción del Cliente:</strong> Al optimizar la experiencia de uso, se incrementa la satisfacción del cliente, lo que puede resultar en una mayor lealtad a la marca.</li>
+                            <li><strong>Aumento de la Eficiencia:</strong> Herramientas intuitivas reducen el tiempo que los clientes pasan en resolver problemas, aumentando su eficiencia en la interacción con la empresa.</li>
+                            <li><strong>Soporte Proactivo:</strong> Las aplicaciones pueden ofrecer soporte en tiempo real y sugerencias personalizadas, ayudando a los clientes a resolver inquietudes rápidamente.</li>
+                        </ul>
+
+                        <h2>Proceso de Desarrollo</h2>
+                        <p>El proceso para desarrollar estas aplicaciones implica varias etapas:</p>
+                        <ul>
+                            <li><strong>Investigación de Mercado:</strong> Se analiza el mercado y se recopila feedback del cliente para identificar oportunidades de mejora en la experiencia del usuario.</li>
+                            <li><strong>Prototipado y Pruebas:</strong> Se crea prototipos de las aplicaciones que se prueban con usuarios reales para recibir retroalimentación antes del lanzamiento.</li>
+                            <li><strong>Desarrollo de Características:</strong> Se implementan todas las características clave, asegurando que las aplicaciones sean funcionales y útiles.</li>
+                            <li><strong>Monitoreo y Mejora Continua:</strong> Después del lanzamiento, se monitorea el uso de las aplicaciones y se realiza mejoras en base a la retroalimentación de los usuarios.</li>
+                        </ul>
+
+                        <h2>Conclusiones</h2>
+                        <p>El desarrollo de nuevas aplicaciones para mejorar la experiencia del cliente es una inversión clave para Tesla. A medida que las expectativas de los consumidores evolucionan, estas herramientas permiten a la compañía no solo satisfacer, sino superar esas expectativas, garantizando así una experiencia del cliente excepcional a lo largo del tiempo.</p>
+                    </div>
+                `
+            },
+    
+            // Agregar más servicios según sea necesario
+        };
+        const serviceData = servicioDetalles[servicio];
+
+        if (serviceData) {
+            document.getElementById('service-title').innerText = serviceData.title;
+            document.getElementById('service-image').src = serviceData.image; // Asignar la imagen
+            document.getElementById('service-description').innerHTML = serviceData.description; // Usar innerHTML para mostrar HTML
+        } else {
+            document.getElementById('service-title').innerText = 'Servicio no encontrado';
+            document.getElementById('service-description').innerText = 'No se han encontrado detalles para este servicio.';
+        }
+    </script>
+</body>
+</html>

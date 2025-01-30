@@ -1,0 +1,59 @@
+/* Estilo para los contenedores de servicios */
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre los contenedores */
+}
+
+/* Estilo para los cuadros de servicios */
+.service-box {
+    background-color: #fff;
+    border: 2px solid #ccc; /* Añadido borde */
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33% - 20px); /* Tres columnas */
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Efecto hover para los cuadros de servicios */
+.service-box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para las imágenes dentro de los contenedores */
+.service-box img {
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Separación entre la imagen y el título */
+}
+
+/* Estilo para los títulos de los servicios */
+.service-box h3 {
+    font-size: 1.5em;
+    color: #007BFF; /* Color azul */
+    margin-bottom: 10px;
+}
+
+/* Estilo para las descripciones de los servicios */
+.service-box p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .service-box {
+        width: calc(50% - 20px); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service-box {
+        width: 100%; /* Una sola columna en pantallas pequeñas */
+    }
+}
